@@ -1,0 +1,141 @@
+fileFormatVersion: 2
+guid: 1794458bc23741b4c915a761c513efac
+timeCreated: 1485024663
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Body
+    100002: Body_1
+    100004: Body_2
+    100006: Camera
+    100008: Dorsal_Fin
+    100010: Dorsal_Fin_end
+    100012: Head
+    100014: Head_end
+    100016: Lamp
+    100018: Pectoral_Fin_L
+    100020: Pectoral_Fin_L_end
+    100022: Pectoral_Fin_R
+    100024: Pectoral_Fin_R_end
+    100026: //RootNode
+    100028: Swordy_Rig
+    100030: Swordy_Segment_0_Head
+    100032: Swordy_Segment_1_Dorsal_Fin
+    100034: Swordy_Segment_2_Body_1
+    100036: Swordy_Segment_3_Body_2
+    100038: Swordy_Segment_4_Tail_Pivot
+    100040: Swordy_Segment_5_Tail_Fin
+    100042: Tail_Fin
+    100044: Tail_Fin_end
+    100046: Tail_Pivot
+    400000: Body
+    400002: Body_1
+    400004: Body_2
+    400006: Camera
+    400008: Dorsal_Fin
+    400010: Dorsal_Fin_end
+    400012: Head
+    400014: Head_end
+    400016: Lamp
+    400018: Pectoral_Fin_L
+    400020: Pectoral_Fin_L_end
+    400022: Pectoral_Fin_R
+    400024: Pectoral_Fin_R_end
+    400026: //RootNode
+    400028: Swordy_Rig
+    400030: Swordy_Segment_0_Head
+    400032: Swordy_Segment_1_Dorsal_Fin
+    400034: Swordy_Segment_2_Body_1
+    400036: Swordy_Segment_3_Body_2
+    400038: Swordy_Segment_4_Tail_Pivot
+    400040: Swordy_Segment_5_Tail_Fin
+    400042: Tail_Fin
+    400044: Tail_Fin_end
+    400046: Tail_Pivot
+    2300000: Swordy_Segment_0_Head
+    2300002: Swordy_Segment_1_Dorsal_Fin
+    2300004: Swordy_Segment_2_Body_1
+    2300006: Swordy_Segment_3_Body_2
+    2300008: Swordy_Segment_4_Tail_Pivot
+    2300010: Swordy_Segment_5_Tail_Fin
+    3300000: Swordy_Segment_0_Head
+    3300002: Swordy_Segment_1_Dorsal_Fin
+    3300004: Swordy_Segment_2_Body_1
+    3300006: Swordy_Segment_3_Body_2
+    3300008: Swordy_Segment_4_Tail_Pivot
+    3300010: Swordy_Segment_5_Tail_Fin
+    4300000: Swordy_Segment_5_Tail_Fin
+    4300002: Swordy_Segment_4_Tail_Pivot
+    4300004: Swordy_Segment_3_Body_2
+    4300006: Swordy_Segment_2_Body_1
+    4300008: Swordy_Segment_0_Head
+    4300010: Swordy_Segment_1_Dorsal_Fin
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
