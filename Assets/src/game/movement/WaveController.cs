@@ -49,7 +49,7 @@ public class WaveController : MonoBehaviour {
     speed[1] = speed[1] * (1 - perpendicularDrag) +
       component * Mathf.Sin(angle) * perpendicularDrag;
 
-    transform.position += new Vector3(speed[0], 0, speed[1]) * Time.fixedDeltaTime;
+    transform.position += new Vector3(-speed[1], 0, speed[0]) * Time.fixedDeltaTime;
     transform.eulerAngles = new Vector3(0, -angle / Mathf.PI * 180, 0);
   }
 }
