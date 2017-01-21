@@ -26,9 +26,6 @@ public class JoypadSelector : MonoBehaviour {
             break;
         }
 
-        print(waveController);
-        print(input);
-
         waveController.input = input;
     }
 }
