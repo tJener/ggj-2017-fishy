@@ -25,7 +25,7 @@ public class MouseFollowInput : MonoBehaviour {
         if (mouseWorldPos.sqrMagnitude < 1) {
             velocity = Vector3.zero;
         } else {
-            velocity += Time.deltaTime * 0.5f * pivot.forward;
+            velocity += Time.deltaTime * 0.1f * pivot.forward;
         }
 
         Vector3 pos = pivot.transform.position;
