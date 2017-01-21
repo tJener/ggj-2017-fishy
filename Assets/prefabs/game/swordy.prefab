@@ -285,8 +285,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4883057756566906}
-  - component: {fileID: 114109949004886826}
   - component: {fileID: 54027653776724478}
+  - component: {fileID: 114331164019266958}
+  - component: {fileID: 114727771436018756}
   m_Layer: 0
   m_Name: swordy
   m_TagString: Untagged
@@ -304,6 +305,7 @@ GameObject:
   - component: {fileID: 4931459378349996}
   - component: {fileID: 33509259632993082}
   - component: {fileID: 23438669690863152}
+  - component: {fileID: 114845383771429550}
   m_Layer: 0
   m_Name: Swordy_Segment_3_Body_2
   m_TagString: Untagged
@@ -397,6 +399,7 @@ GameObject:
   - component: {fileID: 4614922284890352}
   - component: {fileID: 33902234164530050}
   - component: {fileID: 23426922810116708}
+  - component: {fileID: 114825848545460888}
   m_Layer: 0
   m_Name: Swordy_Segment_2_Body_1
   m_TagString: Untagged
@@ -1041,7 +1044,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
---- !u!114 &114109949004886826
+--- !u!114 &114331164019266958
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -1049,10 +1052,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1704121209941362}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2e6c6e1e754bd34386a53ce9e54b4f3, type: 3}
+  m_Script: {fileID: 11500000, guid: 04cf0c84ccdab4754957b6dc455807dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pivot: {fileID: 4883057756566906}
+  accel: 0
+  direction: 0
 --- !u!114 &114481715958401678
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1064,6 +1068,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5c4494202ba90c40913a6c00b5d3e6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114727771436018756
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1704121209941362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bd08d25e0b914871a5cafb89605606c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  input: {fileID: 114331164019266958}
+  drag: 0.005
+  perpendicularDrag: 0.15
+--- !u!114 &114825848545460888
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1926230286840244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66bda051be8334deda0ccef179199f47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  input: {fileID: 114331164019266958}
+--- !u!114 &114845383771429550
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1793159238037838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66bda051be8334deda0ccef179199f47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  input: {fileID: 114331164019266958}
 --- !u!136 &136282497509707812
 CapsuleCollider:
   m_ObjectHideFlags: 1
