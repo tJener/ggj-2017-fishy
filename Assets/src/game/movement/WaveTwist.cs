@@ -1,9 +1,9 @@
 using UnityEngine;
 
 public class WaveTwist : MonoBehaviour {
-  public WaveInput input;
+  public WaveController controller;
 
   void Update() {
-    transform.localEulerAngles = new Vector3(0, input.direction * 7, 0);
+    transform.localEulerAngles = new Vector3(0, controller.input.direction * 7, 0);
   }
 }

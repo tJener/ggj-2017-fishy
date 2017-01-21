@@ -289,8 +289,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4883057756566906}
   - component: {fileID: 54027653776724478}
-  - component: {fileID: 114331164019266958}
   - component: {fileID: 114727771436018756}
+  - component: {fileID: 114219419331751680}
   m_Layer: 0
   m_Name: swordy
   m_TagString: Untagged
@@ -1065,6 +1065,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
+--- !u!114 &114219419331751680
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1704121209941362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ec36f8eaae441841a8b0d6131033ba6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  joypad: 0
 --- !u!114 &114324455426458772
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1076,19 +1088,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8e58e430882290429da3fc253ae23ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114331164019266958
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1704121209941362}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04cf0c84ccdab4754957b6dc455807dd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  accel: 0
-  direction: 0
 --- !u!114 &114481715958401678
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1111,7 +1110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bd08d25e0b914871a5cafb89605606c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  input: {fileID: 114331164019266958}
+  input: {fileID: 0}
   drag: 0.005
   perpendicularDrag: 0.15
 --- !u!114 &114825848545460888
@@ -1125,7 +1124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66bda051be8334deda0ccef179199f47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  input: {fileID: 114331164019266958}
+  controller: {fileID: 114727771436018756}
 --- !u!114 &114845383771429550
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1137,7 +1136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66bda051be8334deda0ccef179199f47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  input: {fileID: 114331164019266958}
+  controller: {fileID: 114727771436018756}
 --- !u!135 &135502976183601788
 SphereCollider:
   m_ObjectHideFlags: 1
