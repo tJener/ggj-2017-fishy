@@ -7,6 +7,8 @@ public class Goal : MonoBehaviour {
     public delegate void GoalCallback();
     public event GoalCallback callback;
 
+    public AudioSource source;
+
     void OnTriggerEnter(Collider other) {
         var b = other.gameObject.GetComponent<Ball>();
         if (b == null) {
@@ -17,6 +19,9 @@ public class Goal : MonoBehaviour {
         }
         if (b != null) {
             print("Goal!");
+            if (source != null) {
+              source.Play();
+            }
             if (callback != null) {
                 callback();
             }
