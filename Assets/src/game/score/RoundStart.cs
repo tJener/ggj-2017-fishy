@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class RoundStart : MonoBehaviour {
 
@@ -49,6 +50,22 @@ public class RoundStart : MonoBehaviour {
     scoreTracker.ToggleSize(ScoreTracker.Size.Large);
 
     yield return new WaitForSeconds(3);
+
+    if (scoreTracker.leftScore >= 5 || scoreTracker.rightScore >= 5) {
+      if (scoreTracker.leftScore >= 5) {
+        countdownText.text = "Blue Wins!";
+      }
+      else if (scoreTracker.rightScore >= 5) {
+        countdownText.text = "Red Wins!";
+      }
+      scoreTracker.ToggleSize(ScoreTracker.Size.None);
+
+      yield return new WaitForSeconds(3);
+
+      SceneManager.LoadSceneAsync("scenes/title");
+
+      yield break;
+    }
 
     Object.Destroy(roundObject);
 

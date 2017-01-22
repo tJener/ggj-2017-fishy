@@ -39,6 +39,12 @@ public class ScoreTracker : MonoBehaviour {
     leftScore += 1;
     leftText.text = leftScore.ToString();
     leftLargeText.text = leftScore.ToString();
+    // if (leftScore >= 5) {
+    //   leftText.text = "Blue Wins!";
+    //   leftLargeText.text = "Blue Wins!";
+    //   rightText.text = "";
+    //   rightLargeText.text = "";
+    // }
     PublishGoal();
   }
 
@@ -46,6 +52,12 @@ public class ScoreTracker : MonoBehaviour {
     rightScore += 1;
     rightText.text = rightScore.ToString();
     rightLargeText.text = rightScore.ToString();
+    // if (rightScore >= 5) {
+    //   leftText.text = "";
+    //   leftLargeText.text = "";
+    //   rightText.text = "Red Wins!";
+    //   rightLargeText.text = "Red Wins!";
+    // }
     PublishGoal();
   }
 
@@ -56,6 +68,7 @@ public class ScoreTracker : MonoBehaviour {
   }
 
   public enum Size {
+    None,
     Small,
     Large,
   }

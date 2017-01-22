@@ -10,12 +10,26 @@ public class Gibbify : MonoBehaviour {
     bool once;
 
     IEnumerator Respawn() {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(2);
 
         var newCopy = Object.Instantiate(original);
         newCopy.transform.parent = transform.parent;
         var gib = newCopy.GetComponent<Gibbify>();
         gib.original = original;
+
+        newCopy.GetComponent<WavePhysicsController>().enabled = false;
+
+        for (int i = 0; i < 8; i++) {
+          newCopy.active = true;
+          yield return new WaitForSeconds(0.0625f);
+
+          newCopy.active = false;
+          yield return new WaitForSeconds(0.0625f);
+        }
+
+        newCopy.active = true;
+        newCopy.GetComponent<WavePhysicsController>().enabled = true;
+
         Object.Destroy(gameObject);
     }
 
@@ -28,7 +42,7 @@ public class Gibbify : MonoBehaviour {
         var colliders = controller.gameObject.GetComponentsInChildren<MeshCollider>();
         foreach (var c in colliders) {
             var r = c.gameObject.AddComponent<Rigidbody>();
-            r.gameObject.layer = LayerMask.NameToLayer("OtherPhysics");
+            r.gameObject.layer = LayerMask.NameToLayer("DeadPhysics");
 
             var smr = c.gameObject.GetComponent<SkinnedMeshRenderer>();
 

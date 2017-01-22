@@ -380,7 +380,7 @@ GameObject:
   - component: {fileID: 4086299228500808}
   - component: {fileID: 136769491769988050}
   m_Layer: 9
-  m_Name: GameObject
+  m_Name: env_collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
