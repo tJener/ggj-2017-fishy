@@ -29,6 +29,16 @@ ModelImporter:
     100042: Tail_Fin
     100044: Tail_Fin_end
     100046: Tail_Pivot
+    100048: Body_0.Pivot
+    100050: Body_1.Pivot
+    100052: Body_2.Pivot
+    100054: ROTATE_DirectionalTailPoint
+    100056: ROTATE_Propulsion
+    100058: ROTATE_Propulsion_end
+    100060: Socket
+    100062: Socket_end
+    100064: Socket_Parent
+    100066: Tail_Pivot.001
     400000: Body
     400002: Body_1
     400004: Body_2
@@ -53,6 +63,16 @@ ModelImporter:
     400042: Tail_Fin
     400044: Tail_Fin_end
     400046: Tail_Pivot
+    400048: Body_0.Pivot
+    400050: Body_1.Pivot
+    400052: Body_2.Pivot
+    400054: ROTATE_DirectionalTailPoint
+    400056: ROTATE_Propulsion
+    400058: ROTATE_Propulsion_end
+    400060: Socket
+    400062: Socket_end
+    400064: Socket_Parent
+    400066: Tail_Pivot.001
     2300000: Swordy_Segment_0_Head
     2300002: Swordy_Segment_1_Dorsal_Fin
     2300004: Swordy_Segment_2_Body_1
@@ -71,6 +91,14 @@ ModelImporter:
     4300006: Swordy_Segment_2_Body_1
     4300008: Swordy_Segment_0_Head
     4300010: Swordy_Segment_1_Dorsal_Fin
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: Swordy_Segment_0_Head
+    13700002: Swordy_Segment_1_Dorsal_Fin
+    13700004: Swordy_Segment_2_Body_1
+    13700006: Swordy_Segment_3_Body_2
+    13700008: Swordy_Segment_4_Tail_Pivot
+    13700010: Swordy_Segment_5_Tail_Fin
   materials:
     importMaterials: 1
     materialName: 0
@@ -85,7 +113,7 @@ ModelImporter:
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -127,13 +155,13 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    rootMotionBoneName: 
+    rootMotionBoneName: Swordy_Rig
     rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
