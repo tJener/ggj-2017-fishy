@@ -23,7 +23,7 @@ public class WavePhysicsController : MonoBehaviour {
     // Turn the character
     rigidbody.AddTorque(Vector3.down * rigidbody.angularVelocity.y * Time.fixedDeltaTime * 5, ForceMode.Impulse);
     rigidbody.AddTorque(Vector3.down * input.direction * (
-      Mathf.Clamp(lastSpeedMagnitude * tSquared * 8, -0.5f, 0.5f) +
+      Mathf.Clamp(lastSpeedMagnitude * tSquared * 8, -500f, 500f) +
       input.accel * tSquared * 80
     ), ForceMode.Impulse);
 

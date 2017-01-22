@@ -12,10 +12,10 @@ public class JoypadSelector : MonoBehaviour {
     };
 
     public Joypad joypad;
-    WaveController waveController;
+    WavePhysicsController waveController;
 
     void Awake() {
-        waveController = gameObject.GetComponent<WaveController>();
+        waveController = gameObject.GetComponent<WavePhysicsController>();
     }
 
     void Start() {
