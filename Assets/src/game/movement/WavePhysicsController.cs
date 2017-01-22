@@ -24,7 +24,7 @@ public class WavePhysicsController : MonoBehaviour {
     rigidbody.AddTorque(Vector3.down * rigidbody.angularVelocity.y * Time.fixedDeltaTime * 25, ForceMode.Impulse);
     rigidbody.AddTorque(Vector3.down * input.direction * (
       Mathf.Clamp(lastSpeedMagnitude * tSquared * 40, -1f, 1f) +
-      input.accel * tSquared * 320
+      (input.accel + 0.1f) * tSquared * 320
     ), ForceMode.Impulse);
 
     // Apply acceleration to speed of character
