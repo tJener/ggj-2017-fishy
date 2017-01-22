@@ -11,6 +11,7 @@ public class MeshBonePair {
 public class SwordyBody : MonoBehaviour {
     public List<MeshBonePair> meshBonePairs;
     public List<SkinnedMeshRenderer> collidableGeo;
+    public PhysicMaterial physicMaterial;
     public WaveInput waveInput;
     public Animation anim;
     public float skinWidth = 0.01f;
@@ -18,6 +19,7 @@ public class SwordyBody : MonoBehaviour {
     void Start() {
         foreach (var smr in collidableGeo) {
             MeshCollider collider = smr.gameObject.AddComponent<MeshCollider>();
+            collider.material = physicMaterial;
             collider.convex = true;
             collider.inflateMesh = true;
             collider.skinWidth = skinWidth;

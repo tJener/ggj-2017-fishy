@@ -21,10 +21,10 @@ public class WavePhysicsController : MonoBehaviour {
     var lastSpeedMagnitude = rigidbody.velocity.magnitude;
 
     // Turn the character
-    rigidbody.AddTorque(Vector3.down * rigidbody.angularVelocity.y * Time.fixedDeltaTime * 5, ForceMode.Impulse);
+    rigidbody.AddTorque(Vector3.down * rigidbody.angularVelocity.y * Time.fixedDeltaTime * 25, ForceMode.Impulse);
     rigidbody.AddTorque(Vector3.down * input.direction * (
-      Mathf.Clamp(lastSpeedMagnitude * tSquared * 8, -500f, 500f) +
-      input.accel * tSquared * 80
+      Mathf.Clamp(lastSpeedMagnitude * tSquared * 40, -1f, 1f) +
+      input.accel * tSquared * 320
     ), ForceMode.Impulse);
 
     // Apply acceleration to speed of character
@@ -44,5 +44,7 @@ public class WavePhysicsController : MonoBehaviour {
     var component = rigidbody.velocity.x * transform.forward.x + rigidbody.velocity.z * transform.forward.z;
     rigidbody.AddForce(rigidbody.velocity * -perpendicularDrag, ForceMode.VelocityChange);
     rigidbody.AddForce(transform.forward * component * perpendicularDrag, ForceMode.VelocityChange);
+
+    rigidbody.AddForce(-transform.forward * 0.05f, ForceMode.VelocityChange);
   }
 }

@@ -12,7 +12,7 @@ public class Bounce : MonoBehaviour {
           r = c.gameObject.GetComponentInChildren<Rigidbody>();
         }
         if (r != null) {
-          r.AddForceAtPosition(-c.contacts[0].normal, c.contacts[0].point, ForceMode.VelocityChange);
+          r.AddForceAtPosition(-c.contacts[0].normal * 2, c.contacts[0].point, ForceMode.VelocityChange);
         }
     }
 }

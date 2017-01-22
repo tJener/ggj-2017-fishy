@@ -26,6 +26,11 @@ public class RoundStart : MonoBehaviour {
     var controllers = obj.GetComponentsInChildren<WavePhysicsController>();
     DisableControllers(controllers);
     StartCoroutine(CountdownStart(controllers));
+    var originals = resetObject.GetComponentsInChildren<Gibbify>();
+    var gibs = obj.GetComponentsInChildren<Gibbify>();
+    for (int i = 0; i < gibs.Length; i++) {
+      gibs[i].original = originals[i].gameObject;
+    }
   }
 
   void GoalCallback() {

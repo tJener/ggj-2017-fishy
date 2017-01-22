@@ -46,6 +46,7 @@ public class ScoreTracker : MonoBehaviour {
     rightScore += 1;
     rightText.text = rightScore.ToString();
     rightLargeText.text = rightScore.ToString();
+    PublishGoal();
   }
 
   void PublishGoal() {

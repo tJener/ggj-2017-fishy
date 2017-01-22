@@ -8,6 +8,9 @@ public class JoyWaveInput : WaveInput {
     // Add the joystick to the last value making it a second (overall third)
     // order movement control. Then map the linear values to a sin curve.
     var newValue = Mathf.Clamp(Input.GetAxis(axis) * Time.deltaTime * 3 + lastValue * (1 - Time.deltaTime), -1, 1);
+    if (Mathf.Abs(Input.GetAxis(axis)) < 0.1) {
+      newValue = lastValue / 2;
+    }
     lastValue = newValue;
     return Mathf.Sin(newValue * Mathf.PI / 2) * 250;
   }
