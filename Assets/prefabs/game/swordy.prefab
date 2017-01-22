@@ -1004,6 +1004,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8e58e430882290429da3fc253ae23ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  meshBonePairs:
+  - sharedMesh: {fileID: 4300010, guid: 1794458bc23741b4c915a761c513efac, type: 3}
+    bone: {fileID: 1102510112939956}
+  - sharedMesh: {fileID: 4300006, guid: 1794458bc23741b4c915a761c513efac, type: 3}
+    bone: {fileID: 1771120175079120}
+  - sharedMesh: {fileID: 4300004, guid: 1794458bc23741b4c915a761c513efac, type: 3}
+    bone: {fileID: 1366822738475776}
+  - sharedMesh: {fileID: 4300002, guid: 1794458bc23741b4c915a761c513efac, type: 3}
+    bone: {fileID: 1990813850414622}
+  - sharedMesh: {fileID: 4300000, guid: 1794458bc23741b4c915a761c513efac, type: 3}
+    bone: {fileID: 1736512736277228}
   collidableGeo:
   - {fileID: 137268835044819636}
   - {fileID: 137475846215120546}
