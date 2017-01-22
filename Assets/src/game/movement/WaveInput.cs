@@ -6,6 +6,8 @@ public class WaveInput : MonoBehaviour {
   public float accel;
   public float direction;
 
+  float _lastValue;
+
   int windowSize = 50;
   float timeMultiple = 1000;
   float lastTime;
@@ -14,7 +16,7 @@ public class WaveInput : MonoBehaviour {
   bool active;
 
   float resetWidth = 1;
-  float resetLength = 250;
+  float resetLength = 350;
 
   int[] peakIndices;
   int[] troughIndices;
@@ -42,6 +44,8 @@ public class WaveInput : MonoBehaviour {
     }
 
     var newValue = GetAxis();
+    var diffValue = newValue - _lastValue;
+    _lastValue = newValue;
 
     // Figure out how much time has passed, enqueue values until now.
     var lastTimeRound = Mathf.Floor(lastTime * timeMultiple) / timeMultiple;
@@ -52,7 +56,7 @@ public class WaveInput : MonoBehaviour {
       buffer.Enqueue(newValue);
     }
 
-    if (enqueueCount == 0) {
+    if (enqueueCount == 0 || buffer.Count == 0) {
       return;
     }
 
@@ -135,7 +139,7 @@ public class WaveInput : MonoBehaviour {
         i++;
       }
       resetWidth0 = Mathf.Abs(max - min);
-      if (Mathf.Abs(max - min) < resetWidth) {
+      if (buffer.Count - Mathf.Max(troughIndices[1], peakIndices[1]) > resetLength) {
         // lastValue = 0;
         accel = 0;
         // direction = 0;
@@ -149,7 +153,7 @@ public class WaveInput : MonoBehaviour {
         // Calculate center between peeks and troughs, this is the direction
         var center1 = peaks[1] / 2 + troughs[1] / 2;
 
-        direction = -1 * center1 / 100;
+        // direction = -1 * center1 / 100;
       }
       else {
         accel = 0;
@@ -157,13 +161,14 @@ public class WaveInput : MonoBehaviour {
       }
     }
     else {
-      for (int i = 0; i < bufferLength - resetLength; i++) {
+      while (buffer.Count > resetLength) {
         accel = 0;
         // direction = 0;
         buffer.Dequeue();
       }
     }
 
+    accel = Mathf.Abs(diffValue) / 100;
     direction = newValue / -100;
   }
 }

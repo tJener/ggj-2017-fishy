@@ -20,9 +20,30 @@ public class JoypadSelector : MonoBehaviour {
 
     void Start() {
         WaveInput input = null;
+        JoyWaveInput joyInput = null;
         switch (joypad) {
         case Joypad.Mouse:
             input = gameObject.AddComponent<MouseWaveInput>() as WaveInput;
+            break;
+        case Joypad.Joypad0:
+            joyInput = gameObject.AddComponent<JoyWaveInput>();
+            joyInput.axis = "Joypad0";
+            input = joyInput as WaveInput;
+            break;
+        case Joypad.Joypad1:
+            joyInput = gameObject.AddComponent<JoyWaveInput>();
+            joyInput.axis = "Joypad1";
+            input = joyInput as WaveInput;
+            break;
+        case Joypad.Joypad2:
+            joyInput = gameObject.AddComponent<JoyWaveInput>();
+            joyInput.axis = "Joypad2";
+            input = joyInput as WaveInput;
+            break;
+        case Joypad.Joypad3:
+            joyInput = gameObject.AddComponent<JoyWaveInput>();
+            joyInput.axis = "Joypad3";
+            input = joyInput as WaveInput;
             break;
         }
 
