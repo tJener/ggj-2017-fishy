@@ -6,6 +6,8 @@ public class WaveInput : MonoBehaviour {
   public float accel;
   public float direction;
 
+  float _lastValue;
+
   int windowSize = 50;
   float timeMultiple = 1000;
   float lastTime;
@@ -42,6 +44,8 @@ public class WaveInput : MonoBehaviour {
     }
 
     var newValue = GetAxis();
+    var diffValue = newValue - _lastValue;
+    _lastValue = newValue;
 
     // Figure out how much time has passed, enqueue values until now.
     var lastTimeRound = Mathf.Floor(lastTime * timeMultiple) / timeMultiple;
@@ -164,6 +168,7 @@ public class WaveInput : MonoBehaviour {
       }
     }
 
+    accel = Mathf.Abs(diffValue) / 100;
     direction = newValue / -100;
   }
 }

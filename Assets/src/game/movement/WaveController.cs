@@ -20,9 +20,13 @@ public class WaveController : MonoBehaviour {
     var lastSpeedMagnitude = Mathf.Sqrt(speed[0] * speed[0] + speed[1] * speed[1]);
 
     // Turn the character
-    angle += Mathf.Sign(input.direction) * Mathf.Pow(Mathf.Clamp(input.direction / 2.5f, -1, 1), 2) * 10 * (
-      lastSpeedMagnitude * tSquared / 2 +
-      input.accel * tSquared
+    // angle += Mathf.Sign(input.direction) * Mathf.Pow(Mathf.Clamp(input.direction / 2.5f, -1, 1), 2) * 10 * (
+    //   lastSpeedMagnitude * tSquared / 2 +
+    //   input.accel * tSquared
+    // );
+    angle += input.direction * (
+      lastSpeedMagnitude * tSquared * 2 +
+      input.accel * tSquared * 5
     );
 
     // Apply acceleration to speed of character
