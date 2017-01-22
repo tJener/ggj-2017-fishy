@@ -11,6 +11,7 @@ public class MeshBonePair {
 public class SwordyBody : MonoBehaviour {
     public List<MeshBonePair> meshBonePairs;
     public List<SkinnedMeshRenderer> collidableGeo;
+    public WaveInput waveInput;
     public Animation anim;
     public float skinWidth = 0.01f;
 
@@ -36,6 +37,9 @@ public class SwordyBody : MonoBehaviour {
 
     void Update() {
         float tailPos = 0.5f;
+        if (waveInput != null) {
+          tailPos = -waveInput.direction / 2.5f + 0.5f;
+        }
         anim.clip.SampleAnimation(anim.gameObject, anim.clip.length * Mathf.Clamp(tailPos, 0.0f, 1.0f));
     }
 }

@@ -13,9 +13,11 @@ public class JoypadSelector : MonoBehaviour {
 
     public Joypad joypad;
     WavePhysicsController waveController;
+    SwordyBody swordyBody;
 
     void Awake() {
         waveController = gameObject.GetComponent<WavePhysicsController>();
+        swordyBody = gameObject.GetComponentInChildren<SwordyBody>();
     }
 
     void Start() {
@@ -48,5 +50,6 @@ public class JoypadSelector : MonoBehaviour {
         }
 
         waveController.input = input;
+        swordyBody.waveInput = input;
     }
 }
